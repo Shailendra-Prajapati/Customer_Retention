@@ -1,4 +1,4 @@
-import pickle
+import joblib
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import OrdinalEncoder
@@ -24,5 +24,5 @@ y_pred = rfr_model.predict(X_test)
 # Checking Accuracy
 print("r2 score", r2_score(y_test, y_pred))
 
-pickle.dump(rfr_model, open('rf_model.pkl', 'wb'))
-pickle.dump(encoder, open('encoder.pkl', 'wb'))
+joblib.dump(rfr_model,"rf_model.joblib")
+joblib.dump(encoder, 'encoder.joblib')
