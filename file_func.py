@@ -33,8 +33,8 @@ def transformations(df, encoder):
 # function to load the model
 def load_models():
 
-    rf_model = joblib.load(open('rf_model.joblib', 'rb'))
-    encoder = joblib.load(open('encoder.joblib', 'rb'))
+    rf_model = joblib.load("models/rf_model.joblib")
+    encoder = joblib.load("models/encoder.joblib")
 
 
     return rf_model, encoder
