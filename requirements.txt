@@ -2,3 +2,5 @@ pandas
 sklearn
 streamlit
 numpy
+pickle
+shutil
