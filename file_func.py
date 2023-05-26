@@ -1,7 +1,7 @@
 import os
 import shutil
 import pandas as pd
-import pickle
+import joblib
 
 # function to create temporary csv data file from it's binary object
 def create_file(file_name, data_bytes):
@@ -33,8 +33,8 @@ def transformations(df, encoder):
 # function to load the model
 def load_models():
 
-    rf_model = pickle.load(open('rf_model.pkl', 'rb'))
-    encoder = pickle.load(open('encoder.pkl', 'rb'))
+    rf_model = joblib.load(open('rf_model.pkl', 'rb'))
+    encoder = joblib.load(open('encoder.pkl', 'rb'))
 
 
     return rf_model, encoder
